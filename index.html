@@ -1,117 +1,69 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="pt-BR"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jogo dos DRAMAS</title>
-    <style>
-        header{
-            background-color: rgb(0, 0, 0);
-            color: rgb(150, 36, 202);
-            text-align: center;
-            border: 15px, solid, purple;
-            padding: 5px;
-        }
+    <title>Jogo dos DRAMAS - Forsaken</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-    Main{ 
-        background-color: rgb(0, 0, 0);
-        color: rgb(255, 255, 255);
-        padding: 7px;
-        O {color: red;}
-    }
-       img{
-        width:150px;
-       }
-       
-    body{
-        background-color: rgb(0, 0, 0);
-    }
-    Title { 
-        background-color :blueviolet;
-    }
-   
-article{ 
-display: flex;
-}
+    <header>  
+        <h2>FORSAKEN</h2>
+        <h>Mas que jogo estranho, ai caramba, quantos dramas, skins e collabs desnecessárias
+        </h>
+    </header>
+
+    <main>
+        <article class="card">
+            <img src="Forsakentela.jpeg" alt="Imagem mais famosa do Forsaken">
+            <div class="card-info">
+                <span class="author"><u>Gabriel dos santos</u> (Apenas um jogador ruim de <span class="highlight-red">C00lkid</span>)</span>
+                <p>Forsaken se trata de um jogo ASYM (Assimétrico) do Roblox, famoso diria, mas não no nível máximo.</p>
+            </div>
+        </article>
+
+        <article class="card">
+            <img src="CloseToMe.jpeg" alt="CloseToMe">
+            <div class="card-info">
+                <h1>Oque é um jogo ASYM?</h1>
+                <p>Um jogo assimétrico é aquele onde os jogadores assumem papéis diferentes, com objetivos, regras, habilidades e mecânicas próprias. Diferente de jogos simétricos (onde todos têm as mesmas condições de vitória e recursos iniciais), a assimetria foca em criar experiências únicas para cada lado.</p>
+                
+                <div class="reaction-buttons">
+                    <button>🖤 <span>0</span></button>
+                    <button>💩 <span>0</span></button>
+                </div>
+            </div>
+        </article>
+
+       <article class="card">
+            <img src="Twotimerender.jpeg" alt="Simbolo do spawnismo">
+            <div class="card-info">
+                <h1>A lore que foi longe demais</h1>
+                <p1>Spawn surgiu no forsaken, sendo parte da lore de um dos personagens, TwoTime, que era um culto que acreditava na segunda vida, então no TikTok, alguém não muito inteligente resolveu levar isso muito a serío.</p1>
+                
+                <div class="reaction-buttons">
+                    <button>🖤 <span>0</span></button>
+                    <button>💩 <span>0</span></button>
+                </div>
+            </div>
+        </article>
+
+         <article class="card">
+            <img src="Guest1337render.jpeg" alt="Simbolo do spawnismo">
+            <div class="card-info">
+                <h1>The Last Guest</h1>
+                <p1>Surdindo originalmente em um filme, Guest1337, e um dos diversos sobreviventes dentro do jogo, ele é um Ex militar que serviu na guerra, e então quando viu seu amigo ser baleado e quase morrer na sua frente, se joga pra dentro do campo de guerra eliminando diversos inimigos e morrendo no processo em um ataque Kamikaze causadado por ele mesmo, por conta desta morte, Spectro o trouxe pra esse mundo</p1>
+                
+                <div class="reaction-buttons">
+                    <button>🖤 <span>0</span></button>
+                    <button>💩 <span>0</span></button>
+                </div>
+            </div>
+        </article>
 
 
-
-p{
-font-weight: bold;
-}
-
-p2{
-font-weight: bold;
-}
-
-div p {
-font-weight: bold;
-}
-
-
-
-
-    
-    </style>
-  </head>
- <body>
-     <header>  
-         
-         <h1>FORSAKEN</h1>
-         <p>Mas que jogo estranho, ai caramba, quantos dramas, skins e collabs desnescesarias</p>
-        </header>
-        <main>
-        <img src="Forsakentela.jpeg" alt="Imagem mais famosa do Forsaken"
-
-        <div>
-            
-<u>Gabriel dos santos (Apenas um jogador ruim de<o> C00lkid </o>) </u>
-  
-<p>Se trata de um jogo ASYM (Assimetrico) do roblox, famoso diria, mas não no nivel maximo </p>
+    </main>
+<script src="script.js"></script>
 
 
 
- </script>
-
-</html>
-       
-
-<header>  
-         
-        <main>
-        <img src="CloseToMe.jpeg" alt="CloseToMe"
-
-        <div>
-            
-
-  
-<p>Um jogo assimétrico é aquele onde os jogadores assumem papéis diferentes, com objetivos, regras, habilidades e mecânicas próprias. Diferente de jogos simétricos (onde todos têm as mesmas condições de vitória e recursos iniciais), a assimetria foca em criar experiências únicas para cada lado.
-<button>🖤​ <span>0</span></button>
-<button>💩<span>0</span></button>
-
-
-</div>
-
-        </main>
-
- </body>
- <script>
-const botoes = document.querySelectorAll("button");
-
-botoes.forEach (function(botao){
-    botao.addEventListener("click", botaoclicado);
-    function botaoclicado () {
-    console.log ("Fui clicado");
-    let texto = botao.querySelector("span");
-    texto.textContent++;
-    }
-    
-}
-)
-
-
- </script>
-
-</html>
-
-   
+</body></html>

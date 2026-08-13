@@ -1,117 +1,300 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jogo dos DRAMAS</title>
-    <style>
-        header{
-            background-color: rgb(0, 0, 0);
-            color: rgb(150, 36, 202);
-            text-align: center;
-            border: 15px, solid, purple;
-            padding: 5px;
-        }
-
-    Main{ 
-        background-color: rgb(0, 0, 0);
-        color: rgb(255, 255, 255);
-        padding: 7px;
-        O {color: red;}
-    }
-       img{
-        width:150px;
-       }
-       
-    body{
-        background-color: rgb(0, 0, 0);
-    }
-    Title { 
-        background-color :blueviolet;
-    }
-   
-article{ 
-display: flex;
-}
-
-
-
-p{
-font-weight: bold;
-}
-
-p2{
-font-weight: bold;
-}
-
-div p {
-font-weight: bold;
-}
-
-
-
-
+/* Variáveis de Cores (Verde, Azul e Amarelo) */
+:root {
+    --bg-color: #070d12;
+    --card-bg: #0f1923;
     
-    </style>
-  </head>
- <body>
-     <header>  
-         
-         <h1>FORSAKEN</h1>
-         <p>Mas que jogo estranho, ai caramba, quantos dramas, skins e collabs desnescesarias</p>
-        </header>
-        <main>
-        <img src="Forsakentela.jpeg" alt="Imagem mais famosa do Forsaken"
-
-        <div>
-            
-<u>Gabriel dos santos (Apenas um jogador ruim de<o> C00lkid </o>) </u>
-  
-<p>Se trata de um jogo ASYM (Assimetrico) do roblox, famoso diria, mas não no nivel maximo </p>
-
-
-
- </script>
-
-</html>
-       
-
-<header>  
-         
-        <main>
-        <img src="CloseToMe.jpeg" alt="CloseToMe"
-
-        <div>
-            
-
-  
-<p>Um jogo assimétrico é aquele onde os jogadores assumem papéis diferentes, com objetivos, regras, habilidades e mecânicas próprias. Diferente de jogos simétricos (onde todos têm as mesmas condições de vitória e recursos iniciais), a assimetria foca em criar experiências únicas para cada lado.
-<button>🖤​ <span>0</span></button>
-<button>💩<span>0</span></button>
-
-
-</div>
-
-        </main>
-
- </body>
- <script>
-const botoes = document.querySelectorAll("button");
-
-botoes.forEach (function(botao){
-    botao.addEventListener("click", botaoclicado);
-    function botaoclicado () {
-    console.log ("Fui clicado");
-    let texto = botao.querySelector("span");
-    texto.textContent++;
-    }
+    /* Tons Principais */
+    --accent-blue: #00d2ff;
+    --accent-green: #00ff88;
+    --accent-yellow: #ffee00;
     
+    /* Glows e Sombras */
+    --blue-glow: rgba(0, 210, 255, 0.4);
+    --green-glow: rgba(0, 255, 136, 0.3);
+    
+    --text-color: #e6f1f5;
+    --red-highlight: #ff4d4d;
 }
-)
 
+/* Estilos Gerais */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
- </script>
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding-bottom: 50px;
+}
 
-</html>
+/* Cabeçalho Estilizado */
+header {
+    width: 100%;
+    background: linear-gradient(180deg, #02080e 0%, #081b29 100%);
+    color: var(--accent-yellow);
+    text-align: center;
+    border-bottom: 3px solid var(--accent-green);
+    padding: 30px 20px;
+    box-shadow: 0px 4px 25px var(--blue-glow);
+}
 
-   
+header h1 {
+    font-size: 3rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    text-shadow: 0 0 12px var(--accent-yellow);
+    margin-bottom: 8px;
+}
+
+header p {
+    color: var(--accent-blue);
+    font-size: 1.05rem;
+    font-style: italic;
+}
+
+/* Conteúdo Principal (Cartões lado a lado da Esquerda para a Direita) */
+main {
+    max-width: 1000px;
+    width: 90%;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row; /* Coloca os cartões da esquerda para a direita */
+    justify-content: center;
+    align-items: stretch; /* Faz os cartões terem a mesma altura */
+    gap: 25px;
+}
+
+/* Cartões de Conteúdo */
+.card {
+    flex: 1; /* Distribui o largura igualmente entre os cartões */
+    background-color: var(--card-bg);
+    border: 1px solid rgba(0, 210, 255, 0.2);
+    border-radius: 16px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column; /* Conteúdo interno em coluna */
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    border-color: var(--accent-green);
+    box-shadow: 0 8px 25px var(--green-glow);
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border: 2px solid var(--accent-blue);
+    box-shadow: 0 0 15px var(--blue-glow);
+    transition: transform 0.3s ease;
+    object-fit: cover;
+}
+
+.card img:hover {
+    transform: scale(1.02);
+}
+
+.card-info {
+    width: 100%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.author {
+    display: block;
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+    color: var(--accent-green);
+    text-decoration: none;
+}
+
+.highlight-red {
+    color: var(--red-highlight);
+    font-weight: bold;
+    text-shadow: 0 0 6px rgba(255, 77, 77, 0.4);
+}
+
+p {
+    line-height: 1.7;
+    font-size: 1.05rem;
+    color: #d0e3ec;
+}
+
+/* Botões de Reação */
+.reaction-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: auto; /* Empurra os botões para o final do cartão */
+    padding-top: 15px;
+}
+
+button {
+    background-color: #0b2230;
+    color: var(--accent-yellow);
+    border: 1px solid var(--accent-green);
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1.05rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+}
+
+button:hover {
+    background-color: var(--accent-yellow);
+    color: #050a0e;
+    border-color: var(--accent-yellow);
+    box-shadow: 0 0 15px rgba(255, 238, 0, 0.5);
+    transform: scale(1.08);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* Responsividade para Telas Menores (Celulares) */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column; /* Em telas pequenas, volta a empilhar verticalmente */
+    }
+}
+
+/* Conteúdo Principal em Grade */
+main {
+    max-width: 1200px;
+    width: 90%;
+    margin: 40px auto;
+    
+    /* Cria colunas responsivas e bem distribuídas */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 30px; /* Espaço entre os blocos */
+}
+
+/* Cartões de Conteúdo com Efeito de Revelação */
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid rgba(0, 210, 255, 0.2);
+    border-radius: 16px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Oculta as informações e o texto por padrão */
+.card .card-info,
+.card .reaction-buttons {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.4s ease, max-height 0.4s ease;
+}
+
+/* Quando passa o mouse no Cartão: REVELA o conteúdo */
+.card:hover {
+    border-color: var(--accent-green);
+    box-shadow: 0 8px 25px var(--green-glow);
+    transform: translateY(-5px);
+}
+
+.card:hover .card-info,
+.card:hover .reaction-buttons {
+    opacity: 1;
+    max-height: 500px; /* Garante espaço suficiente para expor todo o texto */
+}
+
+/* Conteúdo Principal em Grade com Espaçamento */
+main {
+    max-width: 1200px;
+    width: 90%;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px; /* Espaço entre os blocos */
+}
+
+/* Cartão Base */
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid rgba(0, 210, 255, 0.2);
+    border-radius: 16px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Imagem */
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border: 2px solid var(--accent-blue);
+    box-shadow: 0 0 15px var(--blue-glow);
+    object-fit: cover;
+}
+
+/* Título sempre visível logo abaixo da imagem */
+.card-title {
+    color: var(--text-color);
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 5px;
+    transition: color 0.3s ease;
+}
+
+/* ESCONDER apenas o texto detalhado e os botões de reação */
+.card .card-info,
+.card .reaction-buttons {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.4s ease, max-height 0.4s ease;
+}
+
+/* REVELAR tudo ao passar o mouse */
+.card:hover {
+    border-color: var(--accent-green);
+    box-shadow: 0 8px 25px var(--green-glow);
+    transform: translateY(-5px);
+}
+
+.card:hover .card-title {
+    color: var(--accent-yellow); /* Muda a cor do título no hover (opcional) */
+}
+
+.card:hover .card-info,
+.card:hover .reaction-buttons {
+    opacity: 1;
+    max-height: 500px; /* Expande para mostrar todo o texto */
+    margin-top: 10px;
+}
