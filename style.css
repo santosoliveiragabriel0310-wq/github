@@ -4,9 +4,9 @@
     --card-bg: #0f1923;
     
     /* Tons Principais */
-    --accent-blue: #00d2ff;
-    --accent-green: #00ff88;
-    --accent-yellow: #ffee00;
+    --accent-blue: #fff;
+    --accent-green: #b85300;
+    --accent-yellow: #aa9f0a;
     
     /* Glows e Sombras */
     --blue-glow: rgba(0, 210, 255, 0.4);
