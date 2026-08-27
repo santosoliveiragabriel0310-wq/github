@@ -67,7 +67,7 @@ main {
     display: flex;
     flex-direction: row; /* Coloca os cartões da esquerda para a direita */
     justify-content: center;
-    align-items: stretch; /* Faz os cartões terem a mesma altura */
+    align-items:first baseline; /* Faz os cartões terem a mesma altura */
     gap: 25px;
 }
 
