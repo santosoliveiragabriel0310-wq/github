@@ -61,7 +61,7 @@ header p {
 
 /* Conteúdo Principal (Cartões lado a lado da Esquerda para a Direita) */
 main {
-    max-width: 100px;
+    max-width: 10px;
     width: 90%;
     margin-top: 40px;
     display: flex;
